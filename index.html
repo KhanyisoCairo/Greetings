@@ -1,37 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="greet.css">
+    <link rel="stylesheet" href="simple-grid.css">
 </head>
+
 <body>
-    <script src="greet.js"></script>
-    <div class="header">
-        <h6>Greetings</h6>
-    
+   
+    <div class="row">
 
 
-    <div class="language">
-            <form>
-                Name:<br>
-            <input type="text" name="firstname">
-            </form>
+
+        <div class="col-12 ">
+
+            <div class="language">
+
+                <h6>Greetings</h6>
+                <form>
+                    Name:<br>
+                    <input type="text" value="" class="textName" name="firstname">
+                </form><br>
+                <form>
+                    <input type="radio" class= "radioBtn" name="taal" value="Isixhosa"> Isixhosa
+                    <input type="radio"  class= "radioBtn" name="taal" value="English"> English
+                    <input type="radio" class= "radioBtn" name="taal" value="Afrikaans"> Afrikaans<br><br> 
+                   
+                </form>
+             <input  class = "submBtn"type="submit" value="greet-Me" id="greetBtn"><br><br>
+                <div class="row">
+                    <div class="msg col-12">
             
-            <form>
-                    <input type="radio" name="Isixhosa" value="Isixhosa" checked> Isixhosa<br>
-                    <input type="radio" name="English" value="English"> English<br>
-                    <input type="radio" name="Afrikaans" value="Afrikaans"> Afrikaans
-                  </form>
-            
+                    </div>
+                    
+                    <div class="counter col-12">
+                         
+                        </div>
+                </div>
+            </div>
 
 
+
+
+
+        </div>
     </div>
+
+
+
+
     </div>
     <style>
-        .header{
+        .header {
             font-size: 50px;
             background-image: url("/home/codex/projects/greetings/hello.webp");
             padding: 5em;
@@ -40,17 +64,9 @@
             text-align: center;
         }
     </style>
+
+<script src="greet.js"></script>
+<script src="greet-DOM.js"></script>
 </body>
+
 </html>
-
-
-
-    
-
-    
-
-
-
-
-
-
