@@ -2,6 +2,7 @@ var getNameElem = document.querySelector(".textName");
 var submitElem = document.querySelector(".submBtn");
 var msgElem = document.querySelector(".msg");
 var counterElem = document.querySelector(".counter");
+var resetBtnElem = document.querySelector(".clearBtn")
 
 
 var rdBtn1 = document.querySelectorAll(".radioBtn");
@@ -22,30 +23,34 @@ function txtBtnClicked() {
         msgElem.innerHTML = factoryInstance.greet(getNameElem.value, lang);
 
         localStorage.setItem('greetedNames', JSON.stringify(factoryInstance.getName()));
-        
+
     }
     counterFn();
+
 }
 
-function counterFn() {
 
+function counterFn() {
 
     counterElem.innerHTML = factoryInstance.getCounter();
 }
 
-
 function reset() {
-    localStorage.removeItem('greetedNames');
+    getNameElem.innerHTML = "";
+    msgElem.innerHTML = "";
+    factoryInstance.clear();
+    localStorage.clear();
+    counterElem.innerHTML = 0;
 }
 
-submitElem.addEventListener("click", txtBtnClicked) 
+submitElem.addEventListener("click", txtBtnClicked)
+resetBtnElem.addEventListener("click", reset);
 
-// reset 
 
 
 window.addEventListener('DOMContentLoaded', (event) => {
 
 
     counterFn();
- 
+
 });

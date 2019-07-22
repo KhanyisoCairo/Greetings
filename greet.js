@@ -29,6 +29,10 @@ function greetFactory(namesList) {
         return namesGreeted;
     }
 
+    function clear(){
+        namesGreeted = {};
+    }
+
     function getCounter() {
         console.log(Object.keys(namesGreeted).length);
         return Object.keys(namesGreeted).length;
@@ -37,6 +41,7 @@ function greetFactory(namesList) {
     
 
     return {
+        clear,
         getName,
         greet,
         getCounter,
