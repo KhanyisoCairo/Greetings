@@ -3,7 +3,8 @@ var submitElem = document.querySelector(".submBtn");
 var msgElem = document.querySelector(".msg");
 var counterElem = document.querySelector(".counter");
 var resetBtnElem = document.querySelector(".clearBtn")
-
+var resetBtnElem = document.querySelector(".clearBtn")
+var elm = document.querySelector(".clear")
 
 var rdBtn1 = document.querySelectorAll(".radioBtn");
 
