@@ -8,6 +8,9 @@
     <title>Document</title>
     <link rel="stylesheet" href="greet.css">
     <link rel="stylesheet" href="simple-grid.css">
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -68,6 +71,12 @@
 
 <script src="greet.js"></script>
 <script src="greet-DOM.js"></script>
+<script>
+        $(".textName").keyup(function (e) {
+            var regex = /^[a-zA-Z]+$/;
+            (regex.test(this.value) !== true) ? this.value = this.value.replace(/[^a-zA-Z]+/, '') : this.value
+        });
+    </script>
 </body>
 
 </html>
