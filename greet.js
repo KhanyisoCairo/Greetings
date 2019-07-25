@@ -3,14 +3,15 @@ function greetFactory(namesList) {
     var namesGreeted = namesList || {};
     function greet(userName, language) {
 
-        var name = userName.toUpperCase().charAt(0) + userName.slice(1)
-        if (namesGreeted[name] === undefined) {
-            namesGreeted[name] = 1; 
+        var name = userName.toUpperCase().charAt(0) + userName.slice(1) 
+        var name1 = userName.toLowerCase();
+        if (namesGreeted[name1] === undefined) {
+            namesGreeted[name1] = 1; 
             console.log('here', namesGreeted);
           
         
         } else {
-             namesGreeted[name] = namesGreeted[name] + 1;
+             namesGreeted[name1] = namesGreeted[name1] + 1;
             console.log('else', namesGreeted);
         }
 
