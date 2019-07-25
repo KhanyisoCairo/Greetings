@@ -2,17 +2,22 @@ function greetFactory(namesList) {
 
     var namesGreeted = namesList || {};
     function greet(userName, language) {
-
+        if(userName === ""){
+            return 
+        }
+         else if (language === ""){
+            return
+        }
         var name = userName.toUpperCase().charAt(0) + userName.slice(1) 
         var name1 = userName.toLowerCase();
         if (namesGreeted[name1] === undefined) {
             namesGreeted[name1] = 1; 
-         //   console.log('here', namesGreeted);
+      
           
         
         } else {
              namesGreeted[name1] = namesGreeted[name1] + 1;
-          //  console.log('else', namesGreeted);
+         
         }
 
         if (language === "English") {
@@ -21,7 +26,7 @@ function greetFactory(namesList) {
         else if (language === "Afrikaans") {
             return "Hallo, " + name + "!";
         }
-        if (language === "Isixhosa") {
+        if (language === "IsiXhosa") {
             return "Molo, " + name + "!";
         }
     }
