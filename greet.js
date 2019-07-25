@@ -7,12 +7,12 @@ function greetFactory(namesList) {
         var name1 = userName.toLowerCase();
         if (namesGreeted[name1] === undefined) {
             namesGreeted[name1] = 1; 
-            console.log('here', namesGreeted);
+         //   console.log('here', namesGreeted);
           
         
         } else {
              namesGreeted[name1] = namesGreeted[name1] + 1;
-            console.log('else', namesGreeted);
+          //  console.log('else', namesGreeted);
         }
 
         if (language === "English") {
